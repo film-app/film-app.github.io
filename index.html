@@ -54,6 +54,27 @@
         .btn-animated {
             animation: pulseGlow 2.8s infinite ease-in-out;
         }
+
+        .hero-bg {
+            position: relative;
+            background-image: url('assets/bg-catalog.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 18, 32, 0.88);
+            backdrop-filter: blur(6px);
+        }
+        
+        .hero-bg > * {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 
     <!-- OpenGraph -->
@@ -75,7 +96,7 @@
 <body>
 
 <!-- HERO -->
-<section class="min-h-[100vh] flex flex-col items-center justify-center px-6 text-center">
+<section class="hero-bg min-h-[100vh] flex flex-col items-center justify-center px-6 text-center">
 
     <!-- LOGO -->
     <div class="mb-12">
