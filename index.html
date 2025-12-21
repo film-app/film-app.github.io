@@ -3,122 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film App – Descarga Oficial</title>
+
+    <title>Film App | Descargar APK Oficial</title>
+    <meta name="description" content="Descarga Film App APK para Android. Películas y series en HD, rápida, segura y sin registro.">
+    <meta name="keywords" content="Film App APK, descargar películas android, series gratis, app cine">
+    <link rel="canonical" href="https://film-app.github.io">
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Branding -->
     <style>
-        :root {
-            --primary: #0B7BEA;
-            --primary-dark: #0A63C9;
-            --primary-deep: #084FA3;
-            --background: #0F172A;
-            --text-main: #E5E7EB;
-            --glass-bg: rgba(255, 255, 255, 0.05);
+        body {
+            background-color: #0b1220;
+            color: #ffffff;
         }
 
-        body {
-            background-color: var(--background);
-            color: var(--text-main);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        .brand-blue {
+            color: #0b7bea;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0b7bea, #1486ff);
         }
 
         .glass {
-            background: var(--glass-bg);
+            background: rgba(255,255,255,0.05);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255,255,255,0.08);
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 rgba(11, 123, 234, 0.0);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(11, 123, 234, 0.45);
+                transform: scale(1.05);
+            }
+            100% {
+                box-shadow: 0 0 0 rgba(11, 123, 234, 0.0);
+                transform: scale(1);
+            }
         }
 
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(11, 123, 234, 0.35);
+        .btn-animated {
+            animation: pulseGlow 2.8s infinite ease-in-out;
         }
     </style>
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Film App APK">
+    <meta property="og:description" content="Descarga directa del APK oficial de Film App.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://film-app.github.io">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Film App">
+    <meta name="twitter:description" content="Cine y series en tu Android">
+    <meta name="twitter:image" content="assets/og-image.png">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 
-<body class="min-h-screen flex flex-col items-center justify-center px-6">
+<body>
 
-    <!-- HERO -->
-    <section class="max-w-3xl w-full text-center glass rounded-3xl p-10 shadow-2xl">
+<!-- HERO -->
+<section class="min-h-[100vh] flex flex-col items-center justify-center px-6 text-center">
 
-        <!-- Logo -->
-        <div class="mb-6 flex justify-center">
-            <div class="p-5 rounded-2xl bg-black/20 shadow-lg">
-                <img src="assets/logo.webp" alt="Film App Logo" class="w-20 h-20">
-            </div>
-        </div>
+    <!-- LOGO -->
+    <div class="mb-12">
+        <img src="assets/logo.png"
+             alt="Film App Logo"
+             class="w-32 md:w-44 mx-auto drop-shadow-2xl">
+    </div>
 
-        <!-- Title -->
-        <h1 class="text-5xl md:text-6xl font-bold mb-4" style="color: var(--primary);">
-            Film App
-        </h1>
+    <!-- TITLE -->
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+        Film App
+    </h1>
 
-        <p class="text-lg md:text-xl text-gray-300 mb-8">
-            Disfruta películas y series desde múltiples servidores, con opciones siempre disponibles
-            para que elijas la mejor experiencia.
-        </p>
+    <!-- TAGLINE -->
+    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12">
+        Películas y series en alta definición, sin registros ni suscripciones.
+        Descarga directa y segura para Android.
+    </p>
 
-        <!-- Download Button -->
-        <div class="flex justify-center mb-6">
-            <a href="Film_App_v4.4.7.apk"
-               class="btn-primary px-10 py-4 rounded-full text-xl font-bold flex items-center gap-3 shadow-xl">
-                <i class="fab fa-android"></i>
-                Descargar APK
-            </a>
-        </div>
+    <!-- CTA -->
+    <a href="Film_App_v4.4.7.apk"
+       class="btn-primary btn-animated px-14 py-5 rounded-full text-xl font-bold flex items-center gap-4 shadow-2xl">
+        <i class="fab fa-android text-2xl"></i>
+        Descargar APK
+    </a>
 
-        <p class="text-sm text-gray-400">
-            Compatible con Android y Android TV
-        </p>
-    </section>
+    <p class="mt-6 text-sm text-gray-500">
+        Versión 4.4.7 • 11.2 MB • Android 5.0+
+    </p>
+</section>
 
-    <!-- FEATURES -->
-    <section class="max-w-4xl w-full mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- FEATURES -->
+<section class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-        <div class="glass rounded-2xl p-6 text-center">
-            <i class="fas fa-server text-3xl mb-4" style="color: var(--primary);"></i>
-            <h3 class="text-xl font-semibold mb-2">Múltiples servidores</h3>
-            <p class="text-gray-400 text-sm">
-                Siempre tendrás opciones alternativas si un servidor presenta problemas.
+        <div class="glass p-10 rounded-3xl text-center">
+            <i class="fas fa-tv text-4xl brand-blue mb-6"></i>
+            <h3 class="text-xl font-bold mb-3">Calidad HD y 4K</h3>
+            <p class="text-gray-400">
+                Disfruta del contenido con la mejor calidad disponible según tu conexión.
             </p>
         </div>
 
-        <div class="glass rounded-2xl p-6 text-center">
-            <i class="fas fa-tv text-3xl mb-4" style="color: var(--primary);"></i>
-            <h3 class="text-xl font-semibold mb-2">Android TV</h3>
-            <p class="text-gray-400 text-sm">
-                Interfaz optimizada para pantallas grandes y control remoto.
+        <div class="glass p-10 rounded-3xl text-center">
+            <i class="fas fa-cloud-download-alt text-4xl brand-blue mb-6"></i>
+            <h3 class="text-xl font-bold mb-3">Modo Offline</h3>
+            <p class="text-gray-400">
+                Descarga películas y episodios para verlos sin conexión.
             </p>
         </div>
 
-        <div class="glass rounded-2xl p-6 text-center">
-            <i class="fas fa-play-circle text-3xl mb-4" style="color: var(--primary);"></i>
-            <h3 class="text-xl font-semibold mb-2">Reproducción fluida</h3>
-            <p class="text-gray-400 text-sm">
-                Soporte para HLS y MP4 con control total desde la app.
+        <div class="glass p-10 rounded-3xl text-center">
+            <i class="fas fa-shield-alt text-4xl brand-blue mb-6"></i>
+            <h3 class="text-xl font-bold mb-3">Sin Registro</h3>
+            <p class="text-gray-400">
+                No solicitamos cuentas, correos ni datos personales.
             </p>
         </div>
 
-    </section>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="mt-16 text-center text-gray-500 text-sm">
+<!-- INFO -->
+<section class="py-20 px-6 max-w-4xl mx-auto border-t border-gray-800">
+    <h2 class="text-3xl font-bold mb-8 text-center brand-blue">
+        ¿Qué es Film App?
+    </h2>
+
+    <div class="space-y-6 text-gray-300 leading-relaxed">
         <p>
-            © 2025 Film App · Proyecto independiente
+            Film App es una aplicación Android enfocada en ofrecer una experiencia
+            rápida y fluida para disfrutar películas y series desde tu dispositivo móvil.
         </p>
-        <p class="mt-2">
-            Síguenos en X: <span class="text-[color:var(--primary)]">@filmapp1</span>
+
+        <p>
+            Su diseño está optimizado para consumir menos datos, cargar rápido y
+            adaptarse a cualquier tamaño de pantalla.
         </p>
-    </footer>
+
+        <div class="glass p-6 rounded-2xl mt-10">
+            <h3 class="font-semibold mb-2">Compatibilidad</h3>
+            <p class="text-sm">
+                Android 5.0 o superior. Se recomienda conexión Wi-Fi o 4G/5G
+                para contenido en alta definición.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-gray-600 border-t border-gray-800">
+    <p>© 2025 Film App. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
