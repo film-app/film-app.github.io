@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Film App Plus | APK Oficial</title>
-  <meta name="description" content="Descarga Film App Plus, la versión secundaria y ligera de Film App. Ideal para dispositivos con pocos recursos o como APK alternativa.">
+  <title>Film Plus | Descargar APK Oficial de Películas y Series</title>
+  <meta name="description" content="Descarga Film Plus para Android y disfruta películas y series en HD sin registros ni suscripciones. Descarga directa, rápida y segura.">
   <link rel="canonical" href="https://film-app.github.io/plus/">
 
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Film App Plus | APK Secundaria">
-  <meta property="og:description" content="Versión alternativa de Film App para mayor compatibilidad.">
+  <meta property="og:title" content="Film Plus | Descargar APK Oficial">
+  <meta property="og:description" content="Películas y series en HD sin registros ni suscripciones.">
   <meta property="og:image" content="https://film-app.github.io/assets/og-image-plus.png">
   <meta property="og:url" content="https://film-app.github.io/plus/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Film Plus | Descargar APK Oficial">
+  <meta name="twitter:description" content="Películas y series en HD sin registros ni suscripciones.">
+  <meta name="twitter:image" content="https://film-app.github.io/assets/og-image-plus.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -22,62 +28,133 @@
       background-color: #0b1220;
       color: #ffffff;
     }
+
+    .brand-blue {
+      color: #0b7bea;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0b7bea, #1486ff);
+    }
+
     .glass {
       background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg {
+        position: relative;
+        background-image: url('https://film-app.github.io/assets/bg-image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(11, 18, 32, 0.88);
+        backdrop-filter: blur(6px);
+    }
+    
+    .hero-bg > * {
+        position: relative;
+        z-index: 1;
     }
   </style>
 </head>
 
 <body>
 
-<section class="min-h-screen flex items-center justify-center px-6">
-  <div class="max-w-3xl text-center glass p-12 rounded-3xl">
+<!-- HERO -->
+<section class="hero-bg min-h-[100vh] flex flex-col items-center justify-center px-6 text-center">
 
-    <img src="/assets/plus.webp" alt="Film App Plus"
-         class="w-28 mx-auto mb-8">
+  <div class="mb-12">
+    <img src="/assets/plus.webp"
+         alt="Film Plus Logo"
+         class="w-32 md:w-44 mx-auto drop-shadow-2xl">
+  </div>
 
-    <h1 class="text-4xl font-bold mb-4">
-      Film App Plus
-    </h1>
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+    Film Plus
+  </h1>
 
-    <p class="text-gray-400 mb-8">
-      Versión secundaria y alternativa de Film App.
-      Recomendada si la versión principal no se instala
-      o si tu dispositivo tiene recursos limitados.
-    </p>
+  <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12">
+    Películas y series en alta definición, sin registros ni suscripciones.
+    Descarga directa, rápida y segura para Android.
+  </p>
 
-    <a href="https://film-app.github.io/Film_Plus_v1.4.4.apk"
-       class="input inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-full font-semibold">
-      Descargar APK Plus
-    </a>
+  <a href="https://film-app.github.io/Film_Plus_v1.4.4.apk"
+     class="input btn-primary px-14 py-5 rounded-full text-xl font-bold shadow-2xl">
+    Descargar APK Plus
+  </a>
 
-    <p class="mt-4 text-sm text-gray-500">
-      Versión 1.4.4 • 4.4 MB • Android 5.0+
-    </p>
+  <p class="mt-6 text-sm text-gray-500">
+    Versión 1.4.4 • 4.4 MB • Android 5.0+
+  </p>
+
+</section>
+
+<!-- FEATURES -->
+<section class="py-24 px-6 max-w-6xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <div class="glass p-10 rounded-3xl text-center">
+      <h3 class="text-xl font-bold mb-3">Calidad HD</h3>
+      <p class="text-gray-400">
+        Disfruta películas y series con la mejor calidad disponible
+        según tu conexión.
+      </p>
+    </div>
+
+    <div class="glass p-10 rounded-3xl text-center">
+      <h3 class="text-xl font-bold mb-3">Descarga Directa</h3>
+      <p class="text-gray-400">
+        Accede al contenido de forma rápida y sencilla,
+        sin procesos complicados.
+      </p>
+    </div>
+
+    <div class="glass p-10 rounded-3xl text-center">
+      <h3 class="text-xl font-bold mb-3">Sin Registro</h3>
+      <p class="text-gray-400">
+        No solicitamos cuentas, correos ni datos personales.
+      </p>
+    </div>
 
   </div>
 </section>
 
-<section class="py-16 px-6 max-w-4xl mx-auto">
-  <h2 class="text-2xl font-bold mb-6 text-blue-400 text-center">
-    ¿Cuándo usar Film App Plus?
+<!-- INFO -->
+<section class="py-16 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 text-blue-400 text-center">
+    ¿Qué es Film Plus?
   </h2>
 
-  <ul class="text-gray-300 space-y-3 list-disc pl-6">
-    <li>Si la APK principal no instala correctamente</li>
-    <li>Dispositivos con poca memoria o RAM</li>
-    <li>Como APK de respaldo</li>
-    <li>Pruebas de compatibilidad</li>
-  </ul>
+  <div class="text-gray-300 leading-relaxed space-y-4">
+    <p>
+      <strong>Film Plus</strong> es una aplicación para Android que permite
+      disfrutar de películas y series en línea y en alta definición directamente
+      desde tu dispositivo móvil.
+    </p>
+
+    <p>
+      Está diseñada para ofrecer una experiencia fluida, rápida y accesible,
+      optimizada para funcionar correctamente incluso en dispositivos con
+      hardware modesto.
+    </p>
+  </div>
 </section>
 
 <footer class="py-10 text-center text-gray-600 border-t border-gray-800">
-  <p>© 2025 Film App</p>
-  <p class="text-sm mt-2">
-    Esta es una versión secundaria. Para la experiencia completa,
-    visita <a href="/" class="text-blue-400 underline">Film App principal</a>.
+  <p>© 2025 Film Plus</p>
+
+  <p>
+    <strong class="text-white">Aviso legal:</strong>
+    Film Plus no aloja ni transmite contenido en sus servidores. La aplicación
+    únicamente organiza enlaces disponibles públicamente en Internet.
   </p>
 </footer>
 
