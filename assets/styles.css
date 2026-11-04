@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #060a13;
+    --bg-surface: #0b1221;
+    --brand-primary: #0b7bea;
+    --brand-secondary: #38bdf8;
+    --glass-bg: rgba(15, 23, 42, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.09);
+    --glass-border-hover: rgba(56, 189, 248, 0.35);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.nav-blur {
+    background: rgba(6, 10, 19, 0.80);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Hero Background with smooth fade into dark body */
+.hero-cinema {
+    position: relative;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.hero-cinema::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 22%, rgba(11, 123, 234, 0.20) 0%, transparent 55%),
+        linear-gradient(180deg, rgba(6, 10, 19, 0.78) 0%, rgba(6, 10, 19, 0.90) 68%, #060a13 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.hero-cinema > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Glass Cards */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+    border-color: var(--glass-border-hover);
+    box-shadow: 0 16px 40px -12px rgba(11, 123, 234, 0.18);
+}
+
+.glass-card-lift:hover {
+    transform: translateY(-4px);
+}
+
+/* Buttons */
+.btn-direct {
+    background: linear-gradient(135deg, #0b7bea 0%, #2563eb 50%, #0284c7 100%);
+    box-shadow: 0 10px 30px -6px rgba(11, 123, 234, 0.55);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-direct:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 38px -6px rgba(11, 123, 234, 0.75);
+    filter: brightness(1.06);
+}
+
+.btn-mediafire {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 8px 24px -8px rgba(0, 112, 240, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-mediafire:hover {
+    transform: translateY(-2px);
+    background: rgba(30, 41, 59, 0.92);
+    border-color: rgba(56, 189, 248, 0.75);
+    box-shadow: 0 12px 30px -6px rgba(56, 189, 248, 0.35);
+}
+
+@keyframes subtlePulse {
+    0%, 100% {
+        box-shadow: 0 10px 30px -6px rgba(11, 123, 234, 0.50);
+    }
+    50% {
+        box-shadow: 0 12px 42px -2px rgba(56, 189, 248, 0.68);
+    }
+}
+
+.btn-pulse {
+    animation: subtlePulse 3s infinite ease-in-out;
+}
+
+/* Logo Glow */
+.app-logo-glow {
+    filter: drop-shadow(0 16px 32px rgba(11, 123, 234, 0.38));
+    transition: transform 0.3s ease;
+}
+
+.app-logo-glow:hover {
+    transform: scale(1.04);
+}
+
+/* Gradient Text */
+.text-gradient-blue {
+    background: linear-gradient(135deg, #ffffff 15%, #7dd3fc 65%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Accordion FAQ */
+details.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+details.faq-item .faq-chevron {
+    transition: transform 0.25s ease;
+}
+
+details.faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+}
+
+details.faq-item[open] {
+    border-color: rgba(56, 189, 248, 0.35);
+    background: rgba(15, 23, 42, 0.85);
+}

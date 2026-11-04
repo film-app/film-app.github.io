@@ -1,162 +1,481 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Film Plus | Descargar APK Oficial de Películas y Series</title>
-  <meta name="description" content="Descarga Film Plus para Android y disfruta películas y series en HD sin registros ni suscripciones. Descarga directa, rápida y segura.">
-  <link rel="canonical" href="https://film-app.github.io/plus/">
+    <title>Film Plus | Descargar APK Oficial v1.4.7 (Android TV y Móvil)</title>
+    <meta name="description" content="Descarga Film Plus v1.4.7 APK para Android TV, TV Box y móviles por descarga directa o MediaFire. Películas y series en HD sin registros.">
+    <meta name="keywords" content="Film Plus APK, Film App Android TV, descargar películas smart tv, apk cine tv box, mediafire film plus">
+    <link rel="canonical" href="https://film-app.github.io/plus/">
 
-  <!-- OpenGraph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Film Plus | Descargar APK Oficial">
-  <meta property="og:description" content="Películas y series en HD sin registros ni suscripciones.">
-  <meta property="og:image" content="https://film-app.github.io/assets/og-image-plus.png">
-  <meta property="og:url" content="https://film-app.github.io/plus/">
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Film Plus | Descargar APK Oficial (Android TV & Móvil)">
+    <meta property="og:description" content="Películas y series en HD sin registros. Mismos servidores que Film App con interfaz dedicada para Android TV y diseño ligero en móvil.">
+    <meta property="og:image" content="https://film-app.github.io/assets/og-image-plus.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://film-app.github.io/plus/">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Film Plus | Descargar APK Oficial">
-  <meta name="twitter:description" content="Películas y series en HD sin registros ni suscripciones.">
-  <meta name="twitter:image" content="https://film-app.github.io/assets/og-image-plus.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Film Plus | Descargar APK Oficial">
+    <meta name="twitter:description" content="Interfaz dedicada para Android TV y móvil. Descarga directa y espejo en MediaFire.">
+    <meta name="twitter:image" content="https://film-app.github.io/assets/og-image-plus.png">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 
-  <style>
-    body {
-      background-color: #0b1220;
-      color: #ffffff;
-    }
-
-    .brand-blue {
-      color: #0b7bea;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #0b7bea, #1486ff);
-    }
-
-    .glass {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .hero-bg {
-        position: relative;
-        background-image: url('https://film-app.github.io/assets/bg-image.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    .hero-bg::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(11, 18, 32, 0.88);
-        backdrop-filter: blur(6px);
-    }
-    
-    .hero-bg > * {
-        position: relative;
-        z-index: 1;
-    }
-  </style>
+    <!-- Tailwind & Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body>
+<body class="antialiased selection:bg-sky-500 selection:text-white">
 
-<!-- HERO -->
-<section class="hero-bg min-h-[100vh] flex flex-col items-center justify-center px-6 text-center">
+    <!-- NAVBAR -->
+    <header class="fixed top-0 inset-x-0 z-50 nav-blur">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-center lg:justify-between gap-3">
+            <!-- App Switcher Pill -->
+            <nav aria-label="Selector de aplicación" class="flex items-center p-1 rounded-full bg-slate-900/90 border border-white/10 shadow-inner">
+                <a href="../"
+                   class="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition">
+                    <span>Film App</span>
+                </a>
+                <a href="https://film-app.github.io/plus/"
+                   class="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-blue-600 text-white shadow-md shadow-blue-600/30 transition">
+                    <span>Film Plus</span>
+                    <span class="px-1.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider rounded bg-white/20 text-white">TV</span>
+                </a>
+            </nav>
 
-  <div class="mb-12">
-    <img src="/assets/plus.webp"
-         alt="Film Plus Logo"
-         class="w-32 md:w-44 mx-auto drop-shadow-2xl">
-  </div>
+            <!-- Desktop Links & Social -->
+            <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#caracteristicas" class="hover:text-white transition">Ventajas</a>
+                <a href="#comparativa" class="hover:text-white transition">Comparativa</a>
+                <a href="#instalacion" class="hover:text-white transition">Instalar en TV/Móvil</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+                <a href="https://x.com/filmapp1" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white transition">
+                    <i class="fab fa-x-twitter text-sky-400"></i>
+                    <span>@filmapp1</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
-    Film Plus
-  </h1>
+    <!-- HERO -->
+    <section class="hero-cinema pt-28 pb-20 md:pt-36 md:pb-28 px-5" style="background-image: url('../assets/bg-image.jpg');">
+        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
 
-  <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12">
-    Películas y series en alta definición, sin registros ni suscripciones.
-    Descarga directa, rápida y segura para Android.
-  </p>
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-7">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs sm:text-sm font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Versión Oficial 1.4.7</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-indigo-500/15 border border-indigo-400/30 text-indigo-200 text-xs sm:text-sm font-semibold">
+                    <i class="fas fa-tv text-sky-400"></i>
+                    <span>Interfaz Dedicada Android TV + Móvil</span>
+                </div>
+            </div>
 
-  <a href="https://raw.githubusercontent.com/film-app/film-app.github.io/master/Film_Plus_v1.4.7.apk"
-     class="input btn-primary px-14 py-5 rounded-full text-xl font-bold shadow-2xl">
-    Descargar APK Plus
-  </a>
+            <!-- App Logo -->
+            <div class="mb-6">
+                <img src="../assets/plus.webp"
+                     alt="Film Plus Logo"
+                     class="w-28 sm:w-36 md:w-40 mx-auto app-logo-glow">
+            </div>
 
-  <p class="mt-6 text-sm text-gray-500">
-    Versión 1.4.7 • 9 MB • Android 5.0+
-  </p>
+            <!-- Title -->
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 text-gradient-blue">
+                Film Plus
+            </h1>
 
-</section>
+            <!-- Tagline -->
+            <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+                Los mismos servidores, películas y series en HD de Film App, con una <strong class="text-white font-semibold">interfaz renovada en celulares</strong> y <strong class="text-sky-300 font-semibold">modo nativo dedicado para Android TV y TV Box</strong>.
+            </p>
 
-<!-- FEATURES -->
-<section class="py-24 px-6 max-w-6xl mx-auto">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- DUAL DOWNLOAD HUB -->
+            <div class="w-full max-w-2xl glass-card rounded-3xl p-5 sm:p-7 shadow-2xl">
+                <p class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-4">
+                    Elige tu servidor de descarga gratuito
+                </p>
 
-    <div class="glass p-10 rounded-3xl text-center">
-      <h3 class="text-xl font-bold mb-3">Calidad HD</h3>
-      <p class="text-gray-400">
-        Disfruta películas y series con la mejor calidad disponible
-        según tu conexión.
-      </p>
-    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Direct Download (Fixed branch to main!) -->
+                    <a href="https://github.com/film-app/film-app.github.io/raw/refs/heads/main/Film_Plus_v1.4.7.apk"
+                       onclick="setTimeout(()=>location.href='../gracias.html?app=film-plus', 3500)"
+                       class="btn-direct btn-pulse rounded-2xl px-6 py-4 flex items-center justify-center gap-3.5 text-left group">
+                        <i class="fab fa-android text-3xl text-white shrink-0 group-hover:scale-110 transition-transform"></i>
+                        <div>
+                            <span class="block text-base sm:text-lg font-extrabold text-white leading-tight">
+                                Descarga Directa
+                            </span>
+                            <span class="block text-xs text-blue-100/90 font-medium mt-0.5">
+                                APK Plus Oficial • 1 clic
+                            </span>
+                        </div>
+                    </a>
 
-    <div class="glass p-10 rounded-3xl text-center">
-      <h3 class="text-xl font-bold mb-3">Descarga Directa</h3>
-      <p class="text-gray-400">
-        Accede al contenido de forma rápida y sencilla,
-        sin procesos complicados.
-      </p>
-    </div>
+                    <!-- MediaFire Mirror -->
+                    <a href="https://www.mediafire.com/file/l7oq0yyk6backko/Film_Plus_v1.4.7.apk/file"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn-mediafire rounded-2xl px-6 py-4 flex items-center justify-center gap-3.5 text-left group">
+                        <i class="fas fa-cloud-arrow-down text-2xl text-sky-400 shrink-0 group-hover:scale-110 transition-transform"></i>
+                        <div>
+                            <span class="block text-base sm:text-lg font-bold text-white leading-tight">
+                                MediaFire
+                            </span>
+                            <span class="block text-xs text-sky-300/90 font-medium mt-0.5">
+                                Mirror alternativo
+                            </span>
+                        </div>
+                    </a>
+                </div>
 
-    <div class="glass p-10 rounded-3xl text-center">
-      <h3 class="text-xl font-bold mb-3">Sin Registro</h3>
-      <p class="text-gray-400">
-        No solicitamos cuentas, correos ni datos personales.
-      </p>
-    </div>
+                <!-- Discreet Mirrors for Direct Download -->
+                <p class="mt-3.5 text-xs text-slate-400">
+                    ¿No inicia la descarga?
+                    <a href="https://cdn.jsdelivr.net/gh/film-app/film-app.github.io@main/Film_Plus_v1.4.7.apk"
+                       onclick="setTimeout(()=>location.href='../gracias.html?app=film-plus', 3500)"
+                       class="ml-1.5 text-slate-300 hover:text-sky-400 underline underline-offset-4 transition">Mirror 1</a>
+                    <span class="mx-1.5 text-slate-600">·</span>
+                    <a href="https://rawcdn.githack.com/film-app/film-app.github.io/main/Film_Plus_v1.4.7.apk"
+                       onclick="setTimeout(()=>location.href='../gracias.html?app=film-plus', 3500)"
+                       class="text-slate-300 hover:text-sky-400 underline underline-offset-4 transition">Mirror 2</a>
+                </p>
 
-  </div>
-</section>
+                <!-- Technical Specs Pills -->
+                <div class="mt-4 pt-4 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:text-sm text-slate-300">
+                    <span class="inline-flex items-center gap-1.5">
+                        <i class="fas fa-tag text-sky-400"></i> v1.4.7
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                        <i class="fas fa-feather-pointed text-sky-400"></i> 9.0 MB (Ligera)
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                        <i class="fab fa-android text-emerald-400"></i> Android 5.0+
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                        <i class="fas fa-shield-halved text-emerald-400"></i> APK original
+                    </span>
+                </div>
+            </div>
 
-<!-- INFO -->
-<section class="py-16 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold mb-6 text-blue-400 text-center">
-    ¿Qué es Film Plus?
-  </h2>
+            <!-- Sister App Switch Banner -->
+            <a href="../"
+               class="mt-6 inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800/90 border border-white/15 hover:border-blue-400/50 text-xs sm:text-sm text-slate-200 transition group max-w-2xl">
+                <span class="px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 font-bold text-xs shrink-0">
+                    <i class="fas fa-mobile-screen mr-1"></i>Móvil
+                </span>
+                <span>
+                    ¿Prefieres el diseño clásico en tu teléfono? Conoce también <strong class="text-white">Film App v5.0.6</strong>
+                    <i class="fas fa-arrow-right text-sky-400 ml-1.5 group-hover:translate-x-1 transition-transform"></i>
+                </span>
+            </a>
 
-  <div class="text-gray-300 leading-relaxed space-y-4">
-    <p>
-      <strong>Film Plus</strong> es una aplicación para Android que permite
-      disfrutar de películas y series en línea y en alta definición directamente
-      desde tu dispositivo móvil.
-    </p>
+        </div>
+    </section>
 
-    <p>
-      Está diseñada para ofrecer una experiencia fluida, rápida y accesible,
-      optimizada para funcionar correctamente incluso en dispositivos con
-      hardware modesto.
-    </p>
-  </div>
-</section>
+    <!-- FEATURES -->
+    <section id="caracteristicas" class="py-20 px-5 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Experiencia Plus</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4">Pensada para tu sala y tu bolsillo</h2>
+            <p class="text-slate-400">
+                Toda la potencia del catálogo Film en un paquete ultraligero de 9 MB adaptado tanto a televisores como a pantallas táctiles.
+            </p>
+        </div>
 
-<footer class="py-10 text-center text-gray-600 border-t border-gray-800">
-  <p>© 2025 Film Plus</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card glass-card-lift p-7 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/15 border border-sky-400/25 flex items-center justify-center mb-5">
+                    <i class="fas fa-tv text-2xl text-sky-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">Interfaz Android TV</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Única con diseño visual dedicado para pantallas grandes, Smart TV y TV Box Android con control remoto (D-Pad).
+                </p>
+            </div>
 
-  <p>
-    <strong class="text-white">Aviso legal:</strong>
-    Film Plus no aloja ni transmite contenido en sus servidores. La aplicación
-    únicamente organiza enlaces disponibles públicamente en Internet.
-  </p>
-</footer>
+            <div class="glass-card glass-card-lift p-7 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/15 border border-sky-400/25 flex items-center justify-center mb-5">
+                    <i class="fas fa-mobile-screen-button text-2xl text-sky-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">Fluida en Móviles</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    En celulares y tablets ofrece una interfaz moderna alternativa, súper rápida y con apenas 9.0 MB de peso.
+                </p>
+            </div>
+
+            <div class="glass-card glass-card-lift p-7 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/15 border border-sky-400/25 flex items-center justify-center mb-5">
+                    <i class="fas fa-server text-2xl text-sky-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">Mismos Servidores HD</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Comparte el 100% de los servidores, estrenos, calidad HD/4K y descargas offline de Film App.
+                </p>
+            </div>
+
+            <div class="glass-card glass-card-lift p-7 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/15 border border-sky-400/25 flex items-center justify-center mb-5">
+                    <i class="fas fa-lock-open text-2xl text-sky-400"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">Sin Registro</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    No pedimos cuentas, correos ni suscripciones. Abre la aplicación en tu TV o celular y empieza a ver.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION -->
+    <section id="comparativa" class="py-20 px-5 border-t border-white/5 bg-slate-950/40">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Comparativa Rápida</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4">¿En qué se diferencian Film Plus y Film App?</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    Ambas cuentan con <strong class="text-white">los mismos servidores, velocidad y funciones</strong>. Aunque las dos soportan navegación con control remoto (D-Pad), <strong class="text-sky-300">solo Film Plus incorpora una interfaz dedicada para televisores</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card Film Plus (Active) -->
+                <div class="glass-card rounded-3xl p-8 border-2 border-sky-500/50 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="../assets/plus.webp" alt="Film Plus" class="w-14 h-14 object-contain">
+                                <div>
+                                    <h3 class="text-2xl font-extrabold text-white">Film Plus</h3>
+                                    <span class="text-xs font-semibold text-sky-400">Versión 1.4.7 • 9.0 MB</span>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/25 text-sky-200 border border-sky-400/40">
+                                Estás aquí
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-star text-amber-400 mt-1"></i>
+                                <span><strong class="text-white">Interfaz dedicada nativa para Android TV y TV Box</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>Interfaz alternativa moderna para móviles y tablets</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>Mismos servidores HD/4K y catálogo completo</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/10">
+                        <a href="https://github.com/film-app/film-app.github.io/raw/refs/heads/main/Film_Plus_v1.4.7.apk"
+                           onclick="setTimeout(()=>location.href='../gracias.html?app=film-plus', 3500)"
+                           class="py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold text-center transition">
+                            <i class="fas fa-download mr-1.5"></i>APK Directo
+                        </a>
+                        <a href="https://www.mediafire.com/file/l7oq0yyk6backko/Film_Plus_v1.4.7.apk/file"
+                           target="_blank" rel="noopener noreferrer"
+                           class="py-3 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-sky-300 text-xs sm:text-sm font-bold text-center transition">
+                            <i class="fas fa-cloud-arrow-down mr-1.5"></i>MediaFire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Film App -->
+                <div class="glass-card rounded-3xl p-8 hover:border-blue-400/50 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="../assets/logo.webp" alt="Film App" class="w-14 h-14 object-contain">
+                                <div>
+                                    <h3 class="text-2xl font-extrabold text-white">Film App</h3>
+                                    <span class="text-xs font-semibold text-blue-400">Versión 5.0.6 • 11.2 MB</span>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-slate-300 border border-white/10">
+                                Edición Clásica
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>Interfaz original pensada para celulares y tablets</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>Soporte para control remoto (D-Pad) incluido</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>Mismos servidores HD/4K, descargas y sin registro</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <a href="../"
+                           class="block w-full py-3 px-4 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 border border-blue-400/40 text-blue-200 text-sm font-bold text-center transition">
+                            Ir a la página de Film App <i class="fas fa-arrow-right ml-1.5"></i>
+                        </a>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="https://github.com/film-app/film-app.github.io/raw/refs/heads/main/Film_App_v5.0.6.apk"
+                               onclick="setTimeout(()=>location.href='../gracias.html?app=film-app', 3500)"
+                               class="py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 text-xs font-semibold text-center transition">
+                                <i class="fas fa-download mr-1"></i>Directo App
+                            </a>
+                            <a href="https://www.mediafire.com/file/uz4irngopemz9eb/Film_App_v5.0.6.apk/file"
+                               target="_blank" rel="noopener noreferrer"
+                               class="py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-sky-300 text-xs font-semibold text-center transition">
+                                <i class="fas fa-cloud-arrow-down mr-1"></i>MediaFire App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTALLATION GUIDE (MOBILE & ANDROID TV) -->
+    <section id="instalacion" class="py-20 px-5 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Guía Rápida</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4">Cómo instalar Film Plus</h2>
+            <p class="text-slate-400">
+                Instala fácilmente el APK tanto en tu teléfono/tablet como en tu televisor con Android TV o TV Box.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Mobile Guide -->
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 rounded-2xl bg-blue-600/20 border border-blue-400/30 flex items-center justify-center">
+                        <i class="fas fa-mobile-screen text-xl text-sky-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">En Teléfono o Tablet Android</h3>
+                </div>
+                <ol class="space-y-4 text-sm text-slate-300">
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                        <span>Descarga <code class="text-sky-300">Film_Plus_v1.4.7.apk</code> usando <strong>Descarga Directa</strong> o el espejo de <strong>MediaFire</strong>.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                        <span>Abre el archivo desde tus notificaciones o carpeta de Descargas y autoriza <strong>"Permitir desde esta fuente"</strong> si Android lo solicita.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                        <span>Pulsa <strong>Instalar</strong> y abre Film Plus para disfrutar sin registros.</span>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Android TV Guide -->
+            <div class="glass-card p-8 rounded-3xl border border-sky-400/25">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 rounded-2xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center">
+                        <i class="fas fa-tv text-xl text-sky-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">En Android TV o TV Box</h3>
+                </div>
+                <ol class="space-y-4 text-sm text-slate-300">
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-sky-500 text-slate-950 text-xs font-extrabold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                        <span>Abre el navegador de tu TV (o la app <strong>Downloader</strong>) e ingresa a <code class="text-sky-300">film-app.github.io/plus</code>, o envía el APK desde tu celular con <em>Send Files to TV</em>.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-sky-500 text-slate-950 text-xs font-extrabold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                        <span>Activa el permiso de instalar aplicaciones desconocidas para tu navegador o gestor de archivos en Ajustes &gt; Seguridad.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-sky-500 text-slate-950 text-xs font-extrabold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                        <span>Instala y abre <strong>Film Plus</strong> desde el menú de aplicaciones de tu TV para disfrutar su interfaz dedicada.</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 px-5 border-t border-white/5 bg-slate-950/40">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Preguntas Frecuentes</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Todo sobre Film Plus</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="faq-item glass-card rounded-2xl p-5 sm:p-6 transition" open>
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg">
+                        <span>¿Puedo instalar Film Plus en mi celular aunque tenga interfaz de TV?</span>
+                        <i class="fas fa-chevron-down text-sky-400 text-sm faq-chevron shrink-0"></i>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+                        ¡Por supuesto! Film Plus funciona perfectamente tanto en teléfonos y tablets táctiles como en televisores. En móviles disfrutarás de una interfaz alternativa ligera y rápida, y en Android TV disfrutarás de su diseño adaptado a pantalla grande.
+                    </p>
+                </details>
+
+                <details class="faq-item glass-card rounded-2xl p-5 sm:p-6 transition">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg">
+                        <span>¿El enlace de MediaFire tiene la misma versión que Descarga Directa?</span>
+                        <i class="fas fa-chevron-down text-sky-400 text-sm faq-chevron shrink-0"></i>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+                        Sí, ambos enlaces entregan exactamente el mismo archivo oficial <strong>Film_Plus_v1.4.7.apk</strong>. MediaFire está disponible como mirror alternativo por si prefieres descargar desde un servidor externo o si tu red presenta lentitud.
+                    </p>
+                </details>
+
+                <details class="faq-item glass-card rounded-2xl p-5 sm:p-6 transition">
+                    <summary class="flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg">
+                        <span>¿Puedo tener Film App y Film Plus instaladas al mismo tiempo?</span>
+                        <i class="fas fa-chevron-down text-sky-400 text-sm faq-chevron shrink-0"></i>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+                        Sí, son paquetes independientes y no entran en conflicto, por lo que puedes probar ambas y quedarte con la interfaz que te resulte más cómoda.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-5 border-t border-white/10 bg-[#04070e]">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="../" class="hover:text-sky-400 transition">Film App (v5.0.6)</a>
+                <span class="text-slate-700">•</span>
+                <a href="https://film-app.github.io/plus/" class="text-white hover:text-sky-400 transition">Film Plus TV & Móvil (v1.4.7)</a>
+                <span class="text-slate-700">•</span>
+                <a href="https://x.com/filmapp1" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">
+                    <i class="fab fa-x-twitter mr-1"></i>Síguenos en X (@filmapp1)
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500 max-w-3xl mx-auto leading-relaxed">
+                <strong class="text-slate-400">Aviso legal:</strong>
+                Film Plus y Film App no alojan ni transmiten contenido audiovisual en sus propios servidores. Las aplicaciones únicamente organizan enlaces disponibles públicamente en Internet, cuya responsabilidad corresponde a sus respectivos propietarios.
+            </p>
+
+            <p class="text-xs text-slate-600">
+                © 2026 Film Plus. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>

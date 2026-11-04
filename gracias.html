@@ -4,81 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gracias por descargar Film App</title>
-    <meta name="description" content="Gracias por descargar Film App. Sigue los pasos para instalar el APK de forma segura en Android.">
+    <title>Gracias por descargar Film App | APK Oficial</title>
+    <meta name="description" content="Gracias por descargar nuestra aplicación oficial. Sigue estos sencillos pasos para instalar el APK en Android o Android TV, o usa el espejo de MediaFire.">
+    <meta name="robots" content="noindex">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-        body { background-color: #0f172a; color: white; }
-        .glass {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 
-<body>
+<body class="antialiased min-h-screen flex flex-col justify-between">
 
-<section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+    <!-- NAVBAR -->
+    <header class="nav-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a id="back-link" href="https://film-app.github.io/" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-white transition">
+                <i class="fas fa-arrow-left text-sky-400"></i>
+                <span id="back-label">Volver al inicio</span>
+            </a>
 
-    <div class="mb-6 p-4 rounded-full bg-green-600 shadow-lg shadow-green-500/40">
-        <i class="fas fa-check text-4xl"></i>
-    </div>
-
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        ¡Gracias por descargar Film App!
-    </h1>
-
-    <p class="text-gray-400 max-w-xl mb-10">
-        Tu descarga debería haber comenzado automáticamente.  
-        A continuación te explicamos cómo instalar la app correctamente.
-    </p>
-
-    <!-- PASOS -->
-    <div class="glass p-8 rounded-3xl max-w-xl w-full text-left space-y-4">
-        <h2 class="text-xl font-bold text-blue-400 mb-2">
-            Pasos para instalar el APK
-        </h2>
-
-        <ol class="list-decimal pl-5 text-gray-300 space-y-2">
-            <li>Abre el archivo <strong>Film_App_v5.0.2.apk</strong> desde tus descargas.</li>
-            <li>Si Android lo solicita, activa <strong>Permitir de esta fuente</strong>.</li>
-            <li>Confirma la instalación.</li>
-            <li>Abre Film App y comienza a disfrutar.</li>
-        </ol>
-    </div>
-
-    <!-- AVISO -->
-    <p class="text-sm text-gray-500 mt-6 max-w-xl">
-        Si la instalación se bloquea, asegúrate de permitir instalaciones desde fuentes desconocidas
-        en Ajustes &gt; Seguridad.
-    </p>
-
-    <!-- SOPORTE -->
-    <div class="mt-10 space-y-4">
-        <p class="text-gray-400">
-            ¿Tuviste algún problema?
-        </p>
-
-        <div class="flex gap-4 justify-center">
-            <a href="https://x.com/filmapp1" target="_blank"
-               class="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition font-semibold flex items-center gap-2">
-                <i class="fab fa-x-twitter"></i>
-                Soporte en X
+            <a href="https://x.com/filmapp1" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-semibold text-white transition">
+                <i class="fab fa-x-twitter text-sky-400"></i>
+                <span>Soporte @filmapp1</span>
             </a>
         </div>
-    </div>
+    </header>
 
-    <!-- DISCLAIMER -->
-    <p class="text-xs text-gray-600 max-w-2xl mt-12">
-        Film App no aloja contenido en sus servidores. Todo el material es obtenido desde fuentes públicas
-        disponibles en internet. Esta aplicación es solo un reproductor.
-    </p>
+    <!-- MAIN CONTENT -->
+    <main class="py-14 px-5 flex-1 flex items-center justify-center">
+        <div class="max-w-2xl w-full text-center">
 
-</section>
+            <!-- App Logo + Check Badge -->
+            <div class="relative inline-block mb-6">
+                <img id="app-logo" src="assets/logo.webp" alt="Logo App" class="w-24 h-24 object-contain mx-auto app-logo-glow">
+                <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/40 absolute -bottom-1 -right-1 border-2 border-[#060a13]">
+                    <i class="fas fa-check text-sm"></i>
+                </span>
+            </div>
 
+            <h1 id="thanks-title" class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3 text-gradient-blue">
+                ¡Gracias por descargar Film App!
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg mb-8">
+                Tu descarga del archivo <code id="apk-filename" class="px-2 py-0.5 rounded bg-white/10 text-sky-300 font-semibold text-sm">Film_App_v5.0.6.apk</code> ha comenzado automáticamente.
+            </p>
+
+            <!-- FALLBACK / MIRROR DOWNLOAD BOX -->
+            <div class="glass-card rounded-3xl p-6 mb-8 text-center">
+                <p class="text-sm font-semibold text-slate-200 mb-4">
+                    <i class="fas fa-circle-info text-sky-400 mr-1.5"></i>
+                    ¿La descarga no inició o tardó demasiado? Usa cualquiera de estos enlaces:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <a id="retry-direct"
+                       href="https://github.com/film-app/film-app.github.io/raw/refs/heads/main/Film_App_v5.0.6.apk"
+                       class="btn-direct rounded-xl py-3.5 px-5 font-bold text-sm text-white flex items-center justify-center gap-2">
+                        <i class="fas fa-rotate-right"></i>
+                        <span>Reintentar Descarga Directa</span>
+                    </a>
+
+                    <a id="retry-mediafire"
+                       href="https://www.mediafire.com/file/uz4irngopemz9eb/Film_App_v5.0.6.apk/file"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn-mediafire rounded-xl py-3.5 px-5 font-bold text-sm text-sky-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-cloud-arrow-down"></i>
+                        <span>Descargar por MediaFire</span>
+                    </a>
+                </div>
+
+                <!-- Discreet Mirrors -->
+                <p class="mt-4 pt-3.5 border-t border-white/10 text-xs text-slate-400">
+                    ¿Sigue sin iniciar?
+                    <a id="retry-cdn1"
+                       href="https://cdn.jsdelivr.net/gh/film-app/film-app.github.io@main/Film_App_v5.0.6.apk"
+                       class="ml-1.5 text-slate-300 hover:text-sky-400 underline underline-offset-4 transition">Mirror 1</a>
+                    <span class="mx-1.5 text-slate-600">·</span>
+                    <a id="retry-cdn2"
+                       href="https://rawcdn.githack.com/film-app/film-app.github.io/main/Film_App_v5.0.6.apk"
+                       class="text-slate-300 hover:text-sky-400 underline underline-offset-4 transition">Mirror 2</a>
+                </p>
+            </div>
+
+            <!-- INSTALLATION STEPS -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 text-left space-y-5 mb-8">
+                <h2 class="text-lg sm:text-xl font-extrabold text-white flex items-center gap-2.5">
+                    <i class="fab fa-android text-emerald-400 text-2xl"></i>
+                    <span>Pasos para completar la instalación</span>
+                </h2>
+
+                <ol class="space-y-3.5 text-sm sm:text-base text-slate-300">
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                        <span>Abre el archivo <strong id="step-filename" class="text-white">Film_App_v5.0.6.apk</strong> desde tu barra de notificaciones o carpeta de <strong>Descargas</strong>.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                        <span>Si Android muestra un aviso de seguridad, toca en <strong>Configuración</strong> y activa <strong>"Permitir desde esta fuente"</strong>.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                        <span>Pulsa en <strong>Instalar</strong> y abre la app para disfrutar sin cuentas ni registros.</span>
+                    </li>
+                </ol>
+
+                <p class="text-xs text-slate-400 pt-3 border-t border-white/10">
+                    <strong class="text-slate-300">Nota sobre Google Play Protect:</strong> En ocasiones Android solicita escanear apps externas a Google Play; puedes pulsar en <em>"Instalar de todas formas"</em> con total tranquilidad.
+                </p>
+            </div>
+
+            <!-- SISTER APP PROMO -->
+            <a id="sister-promo"
+               href="plus/"
+               class="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm text-slate-300 transition">
+                <i class="fas fa-tv text-sky-400 shrink-0"></i>
+                <span>
+                    <span id="sister-text">¿Usas Android TV o TV Box? Conoce también <strong class="text-white">Film Plus</strong> con interfaz dedicada para TV</span>
+                    <i class="fas fa-arrow-right text-sky-400 ml-1.5"></i>
+                </span>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-5 text-center border-t border-white/10 text-xs text-slate-500">
+        <p class="max-w-xl mx-auto">
+            Film App y Film Plus no alojan contenido en sus servidores; funcionan exclusivamente como organizadores y reproductores de enlaces públicos en Internet.
+        </p>
+    </footer>
+
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var app = params.get('app');
+
+            if (app === 'film-plus' || app === 'plus') {
+                document.title = 'Gracias por descargar Film Plus | APK Oficial';
+                document.getElementById('app-logo').src = 'assets/plus.webp';
+                document.getElementById('app-logo').alt = 'Film Plus Logo';
+                document.getElementById('thanks-title').textContent = '¡Gracias por descargar Film Plus!';
+                document.getElementById('apk-filename').textContent = 'Film_Plus_v1.4.7.apk';
+                document.getElementById('step-filename').textContent = 'Film_Plus_v1.4.7.apk';
+                document.getElementById('retry-direct').href = 'https://github.com/film-app/film-app.github.io/raw/refs/heads/main/Film_Plus_v1.4.7.apk';
+                document.getElementById('retry-mediafire').href = 'https://www.mediafire.com/file/l7oq0yyk6backko/Film_Plus_v1.4.7.apk/file';
+                document.getElementById('retry-cdn1').href = 'https://cdn.jsdelivr.net/gh/film-app/film-app.github.io@main/Film_Plus_v1.4.7.apk';
+                document.getElementById('retry-cdn2').href = 'https://rawcdn.githack.com/film-app/film-app.github.io/main/Film_Plus_v1.4.7.apk';
+                document.getElementById('back-link').href = 'plus/';
+                document.getElementById('back-label').textContent = 'Volver a Film Plus';
+                document.getElementById('sister-promo').href = 'https://film-app.github.io/';
+                document.getElementById('sister-text').innerHTML = '¿Quieres probar nuestra interfaz clásica en tu móvil? Conoce <strong class="text-white">Film App v5.0.6</strong>';
+            }
+        })();
+    </script>
 </body>
 </html>
